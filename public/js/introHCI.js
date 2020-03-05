@@ -8,6 +8,7 @@ $(document).ready(function() {
 // Function that is called when the document is ready.
 function initializePage() {
     $.get('/lab/today', onServerResponse);
+
 }
 
 // Function that is called when the server responds to the AJAX call
@@ -15,11 +16,15 @@ function onServerResponse(data){
     var labElementId = getLabElementId(data.id);
     var labElement = $(labElementId);
     labElement.css({'background': 'yellow'});
+    console.log(data.id);
+    console.log(labElement);
+
 }
 
 
 // Function to format the CSS selector
 function getLabElementId(id){
-    var labElementId = '#lab_' + id;
+    var labElementId = '#lab-' + id;
+    console.log(labElementId);
     return labElementId;
 }
