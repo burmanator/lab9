@@ -16,8 +16,7 @@ function onServerResponse(data){
     var labElementId = getLabElementId(data.id);
     var labElement = $(labElementId);
     labElement.css({'background': 'yellow'});
-    console.log(data.id);
-    console.log(labElement);
+
 
 }
 
